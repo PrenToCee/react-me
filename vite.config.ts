@@ -2,11 +2,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { cloudflare } from "@cloudflare/vite-plugin";
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: "/", // 👈 Ensures URLs like /b_kakada.jpg resolve correctly
+  base: "/", // 👈 ensures root-relative paths work
   build: {
-    outDir: "dist", // 👈 Keeps the output folder clean (not nested in /client)
+    outDir: "dist", // 👈 no nested folders like "dist/client"
+    rollupOptions: {
+      input: "index.html", // 👈 ensures Vite starts from the root
+    },
   },
   plugins: [react(), cloudflare()],
 });

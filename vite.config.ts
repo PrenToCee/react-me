@@ -3,11 +3,11 @@ import react from "@vitejs/plugin-react";
 import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
-  base: "/", // 👈 ensures root-relative paths work
+  base: "/", // ensures root-relative paths work
   build: {
-    outDir: "dist", // 👈 no nested folders like "dist/client"
+    outDir: "dist", // deploys to dist/, not dist/client/
     rollupOptions: {
-      input: "index.html", // 👈 ensures Vite starts from the root
+      input: "index.html", // ensures index.html is at root
     },
   },
   plugins: [react(), cloudflare()],

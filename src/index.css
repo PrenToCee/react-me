@@ -65,4 +65,16 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+  img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .intro-portraits {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
 }

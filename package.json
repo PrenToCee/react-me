@@ -4,20 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "legacy:start": "react-scripts start",
-    "legacy:test": "react-scripts test",
-    "legacy:eject": "react-scripts eject",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "^19.1.0",
